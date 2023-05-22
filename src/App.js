@@ -1,5 +1,4 @@
-import{Route} from 'react-router-dom';
-
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import AllMeetupsPage from './pages/AllMeetups';
 import NewMeetupPage from './pages/NewMeetups';
 import FavoritesPage from './pages/Favorites';
@@ -7,7 +6,8 @@ import FavoritesPage from './pages/Favorites';
 
   function App() {
     return (
-      <div>
+      <BrowserRouter>
+      <Routes>
         <Route path='/' exact>
           <AllMeetupsPage />
         </Route>
@@ -17,7 +17,8 @@ import FavoritesPage from './pages/Favorites';
         <Route path='/favorites'>
           <FavoritesPage />
         </Route>
-      </div>
+      </Routes>
+      </BrowserRouter>
     );
   }
   
