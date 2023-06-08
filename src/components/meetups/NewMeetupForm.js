@@ -5,7 +5,7 @@ import classes from './NewMeetupForm.module.css';
 
 
 
-function NewMeetupForm() {
+function NewMeetupForm(props) {
 
     const titleInputRef = useRef();
     const imageInputRef = useRef ();
@@ -27,10 +27,10 @@ function NewMeetupForm() {
             description: enteredDescription,
         };
 
-        console.log(meetupData);
-
+        // console.log(meetupData);
+        props.onAddMeetup(meetupData);
 }
-
+// https://console.firebase.google.com/project/test-react-59f5a/database/test-react-59f5a-default-rtdb/data/~2F
 
     return (
     <Card>
